@@ -532,11 +532,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44cd68b2bedaf0a42b2065a5541eb50f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  etoPrefab: {fileID: 4288804420364261031, guid: 847fbb23cedb238459a55b69b9590621, type: 3}
+  etoPrefab: {fileID: -3690982824984112709, guid: 847fbb23cedb238459a55b69b9590621, type: 3}
   etoSetTran: {fileID: 1728831965}
   maxRotateAngle: 40
-  maxRange: 400
-  fallPos: 1400
+  etoList: []
+  etoSprites: []
+  eraseEtoList: []
+  linkCount: 0
 --- !u!1 &1018636724
 GameObject:
   m_ObjectHideFlags: 0
