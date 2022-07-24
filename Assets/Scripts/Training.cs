@@ -20,7 +20,7 @@ public class Training : MonoBehaviour
         int i = 11;
         Console.WriteLine("Hello World");
     }
-
+   
     // Update is called once per frame
     void Update()
     {

@@ -12,6 +12,21 @@ public class GameData : MonoBehaviour
     [Header("ゲーム開始時に生成する干支の数")]
     public int createEtoCount = 50;
 
+    [Header("現在のスコア")]
+    public int score = 0;
+
+    [Header("干支を消した際に加算されるスコア")]
+    public int etoPoint = 100;
+
+    [Header("消した干支の数")]
+    public int eraseEtoCount = 0;
+
+    [SerializeField, Header("1回辺りのゲーム時間")]
+    private int initTime = 60;
+
+    [Header("現在のゲームの残り時間")]
+    public float gameTime;
+
     private void Awake()
     {
         if(instance == null)
@@ -23,5 +38,30 @@ public class GameData : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        // ゲームの初期化
+        InitGame();
+    }
+
+    // 考え用
+    //private void Update()
+    //{
+        //gameTime -= Time.deltaTime;
+
+        //initTime = (int)gameTime;
+    //}
+
+    /// <summary>
+    /// ゲーム初期化
+    /// </summary>
+    private void InitGame()
+    {
+        score = 0;
+        eraseEtoCount = 0;
+
+        // ゲーム時間を設定
+        gameTime = initTime;
+
+        Debug.Log("Init Game");
     }
 }
